@@ -59,13 +59,20 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)notification 
 {
-	NSLog(@"selection changed");
 	int selectedRow = [voiceSelection selectedRow];
 	if(selectedRow != -1)
 	{
 		NSString *selectedVoice = [voices objectAtIndex:selectedRow];
 		[speechSynthesizer setVoice:selectedVoice];
 	}
+}
+
+-(id)awakeFromNib
+{
+	NSString *defaultVoice = [NSSpeechSynthesizer defaultVoice];
+	int row = [voices indexOfObject:defaultVoice];
+	[voiceSelection selectRow:row byExtendingSelection:NO];
+	[voiceSelection scrollRowToVisible:row];
 }
 
 @end

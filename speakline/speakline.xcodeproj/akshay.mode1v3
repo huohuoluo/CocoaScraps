@@ -327,18 +327,18 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BA136B59119EE0BD00AEE1D2</string>
+										<string>BA136B6F119EF0AF00AEE1D2</string>
 										<key>history</key>
 										<array>
 											<string>BA58C966119ECDAF00C00F17</string>
 											<string>BA136B54119EE0BD00AEE1D2</string>
-											<string>BA136B55119EE0BD00AEE1D2</string>
-											<string>BA136B56119EE0BD00AEE1D2</string>
+											<string>BA136B6A119EF08E00AEE1D2</string>
+											<string>BA136B6B119EF08E00AEE1D2</string>
 										</array>
-										<key>nextStack</key>
+										<key>prevStack</key>
 										<array>
-											<string>BA136B57119EE0BD00AEE1D2</string>
-											<string>BA136B58119EE0BD00AEE1D2</string>
+											<string>BA136B6C119EF08E00AEE1D2</string>
+											<string>BA136B6D119EF08E00AEE1D2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -532,9 +532,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>BA58C95C119EC86500C00F17</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/akshay/dev/CocoaScraps/speakline/speakline.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -915,7 +915,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
