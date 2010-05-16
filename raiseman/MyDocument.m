@@ -24,10 +24,23 @@
 	[super dealloc];
 }
 
+-(void)startObservingPerson:(Person *)person
+{
+	[person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionOld context:NULL];
+	[person addObserver:self forKeyPath:@"expectedRaise" options:NSKeyValueObservingOptionOld context:NULL];	
+}
+
+-(void)stopObservingPerson:(Person *)person
+{
+	[person removeObserver:self	forKeyPath:@"name"];
+	[person removeObserver:self forKeyPath:@"expectedRaise"];
+}
+
 -(void)insertObject:(Person *)p inEmployeesAtIndex:(int)index 
 {
 	NSUndoManager *undo = [self undoManager];
 	[[undo prepareWithInvocationTarget:self] removeObjectFromEmployeesAtIndex:index];
+	[self startObservingPerson:p];
 	[employees insertObject:p atIndex:index];
 }
 
@@ -36,16 +49,42 @@
 	Person *p = [employees objectAtIndex:index];
 	NSUndoManager *undo = [self undoManager];
 	[[undo prepareWithInvocationTarget:self] insertObject:p inEmployeesAtIndex:index];
+	[self stopObservingPerson:p];
 	[employees removeObjectAtIndex:index];
 }
-	
--(void)setEmployees:(NSMutableArray*)e 
+
+-(void)changeKeyPath:(NSString *)keyPath ofObject:(id)object toValue:(id)newValue
 {
-	if(e==employees)
+	[object setValue:newValue forKeyPath:keyPath];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+	NSUndoManager *undo = [self undoManager];
+	id oldValue = [change objectForKey:NSKeyValueChangeOldKey];
+	if(oldValue == [NSNull null])
+		oldValue = nil;
+	[[undo prepareWithInvocationTarget:self] changeKeyPath:keyPath ofObject:object toValue:oldValue];
+}
+
+-(void)setEmployees:(NSMutableArray*)new_employees 
+{
+	if(new_employees==employees)
 		return;
-	[e retain];
+	
+	for(Person *employee in employees){
+		[self stopObservingPerson:employee];
+	}
+	
+	[new_employees retain];
 	[employees release];
-	employees = e;
+	employees = new_employees;
+	for (Person *employee in employees) {
+		[self startObservingPerson:employee];
+	}
 }
 
 - (NSString *)windowNibName
