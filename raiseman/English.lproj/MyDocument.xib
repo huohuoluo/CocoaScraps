@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="100024"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -134,6 +134,11 @@
 													<bool key="NSIsResizeable">YES</bool>
 													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="124743200"/>
+													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
+														<string key="NSKey">name</string>
+														<bool key="NSAscending">YES</bool>
+														<string key="NSSelector">caseInsensitiveCompare:</string>
+													</object>
 												</object>
 												<object class="NSTableColumn" id="891059230">
 													<double key="NSWidth">1.910000e+02</double>
@@ -159,6 +164,7 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<string>allowsFloats</string>
 																	<string>formatterBehavior</string>
+																	<string>nilSymbol</string>
 																	<string>numberStyle</string>
 																	<string>positiveFormat</string>
 																	<string>roundingMode</string>
@@ -167,6 +173,7 @@
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<integer value="1" id="9"/>
 																	<integer value="1040"/>
+																	<string> </string>
 																	<integer value="3"/>
 																	<string>##,##0%</string>
 																	<integer value="4"/>
@@ -180,11 +187,8 @@
 																<nil key="NSString"/>
 															</object>
 															<object class="NSAttributedString" key="NS.nil">
-																<nil key="NSString"/>
-															</object>
-															<object class="NSAttributedString" key="NS.nan">
-																<string key="NSString">NaN</string>
-																<object class="NSDictionary" key="NSAttributes">
+																<string key="NSString"> </string>
+																<object class="NSDictionary" key="NSAttributes" id="992578070">
 																	<bool key="EncodedWithXMLCoder">YES</bool>
 																	<object class="NSArray" key="dict.sortedKeys">
 																		<bool key="EncodedWithXMLCoder">YES</bool>
@@ -193,6 +197,10 @@
 																		<bool key="EncodedWithXMLCoder">YES</bool>
 																	</object>
 																</object>
+															</object>
+															<object class="NSAttributedString" key="NS.nan">
+																<string key="NSString">NaN</string>
+																<reference key="NSAttributes" ref="992578070"/>
 															</object>
 															<object class="NSDecimalNumberPlaceholder" key="NS.min" id="86642560">
 																<int key="NS.exponent">0</int>
@@ -223,6 +231,11 @@
 													<bool key="NSIsResizeable">YES</bool>
 													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="124743200"/>
+													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
+														<string key="NSKey">expectedRaise</string>
+														<bool key="NSAscending">YES</bool>
+														<string key="NSSelector">compare:</string>
+													</object>
 												</object>
 											</object>
 											<double key="NSIntercellSpacingWidth">3.000000e+00</double>
@@ -420,22 +433,6 @@
 					<int key="connectionID">100036</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.expectedRaise</string>
-						<reference key="source" ref="891059230"/>
-						<reference key="destination" ref="627528643"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="891059230"/>
-							<reference key="NSDestination" ref="627528643"/>
-							<string key="NSLabel">value: arrangedObjects.expectedRaise</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.expectedRaise</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">100037</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">add:</string>
 						<reference key="source" ref="627528643"/>
@@ -466,6 +463,26 @@
 						</object>
 					</object>
 					<int key="connectionID">100044</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.expectedRaise</string>
+						<reference key="source" ref="891059230"/>
+						<reference key="destination" ref="627528643"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="891059230"/>
+							<reference key="NSDestination" ref="627528643"/>
+							<string key="NSLabel">value: arrangedObjects.expectedRaise</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.expectedRaise</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSAllowsEditingMultipleValuesSelection</string>
+								<boolean value="NO" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100045</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -507,8 +524,8 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1032590118"/>
-							<reference ref="453393522"/>
 							<reference ref="1005748872"/>
+							<reference ref="453393522"/>
 						</object>
 						<reference key="parent" ref="275939982"/>
 					</object>
@@ -708,7 +725,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100044</int>
+			<int key="maxID">100045</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

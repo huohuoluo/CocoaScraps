@@ -24,6 +24,21 @@
 	[super dealloc];
 }
 
+-(void)insertObject:(Person *)p inEmployeesAtIndex:(int)index 
+{
+	NSUndoManager *undo = [self undoManager];
+	[[undo prepareWithInvocationTarget:self] removeObjectFromEmployeesAtIndex:index];
+	[employees insertObject:p atIndex:index];
+}
+
+-(void)removeObjectFromEmployeesAtIndex:(int)index
+{	
+	Person *p = [employees objectAtIndex:index];
+	NSUndoManager *undo = [self undoManager];
+	[[undo prepareWithInvocationTarget:self] insertObject:p inEmployeesAtIndex:index];
+	[employees removeObjectAtIndex:index];
+}
+	
 -(void)setEmployees:(NSMutableArray*)e 
 {
 	if(e==employees)
