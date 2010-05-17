@@ -22,6 +22,19 @@
 	return self;
 }
 
+-(id)initWithCoder:(NSCoder *)coder
+{
+	name= [[coder decodeObjectForKey:@"name"] retain];
+	expectedRaise=[coder decodeFloatForKey:@"expectedRaise"];
+	return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)coder
+{
+	[coder encodeObject:name forKey:@"name"];
+	[coder encodeFloat:expectedRaise forKey:@"expectedRaise"];
+}
+
 -(void)dealloc
 {
 	[name release];
