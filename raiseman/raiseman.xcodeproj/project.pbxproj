@@ -25,7 +25,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D15AC270486D014006FF6A4 /* raiseman */;
+			remoteGlobalIDString = 8D15AC270486D014006FF6A4;
 			remoteInfo = raiseman;
 		};
 /* End PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 		8D15AC360486D014006FF6A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* raiseman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = raiseman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA5B0FE911A1918900A3A7B5 /* BBall.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = BBall.icns; sourceTree = "<group>"; };
-		BACBB61411A2607000C94765 /* test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = test.octest; path = build/Debug/test.octest; sourceTree = "<group>"; };
+		BACBB61411A2607000C94765 /* test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBB61511A2607000C94765 /* test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test-Info.plist"; sourceTree = "<group>"; };
 		BACBB62211A2611500C94765 /* PersonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTest.h; sourceTree = "<group>"; };
 		BACBB62311A2611500C94765 /* PersonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
