@@ -11,7 +11,7 @@
 #import "Direction.h"
 
 @interface Orientation : NSObject {
-	Direction direction;
+	Direction *direction;
 	Coordinate *coordinate;
 }
 

@@ -11,25 +11,25 @@
 
 @implementation Orientation
 
--(id)initWithDirection:(Direction)new_direction coordinate:(Coordinate *)new_coordinate
+-(id)initWithDirection:(Direction *)aDirection coordinate:(Coordinate *)aCoordinate
 {
 	if(self = [super init])
 	{
-		direction = new_direction;
-		coordinate = new_coordinate;
+		direction = aDirection;
+		coordinate = aCoordinate;
 	}
 	return self;	
 }
 
 -(id)init
 {
-	return [self initWithDirection:North coordinate:[Coordinate origin]];
+	return [self initWithDirection:[Direction north] coordinate:[Coordinate origin]];
 }
 
 -(id)increment
 {
-	Orientation *newOrientation = [[Orientation alloc] initWithDirection:direction coordinate:coordinate];
-	return newOrientation;
+	Coordinate *increment = [direction increment];
+	return [[Orientation alloc] initWithDirection:direction coordinate:[coordinate add:increment]];
 }
 
 @end

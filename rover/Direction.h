@@ -7,10 +7,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Coordinate.h"
 
-typedef enum {
-	North,
-	East,
-	South,
-	West
-}Direction;
+@interface Direction : NSObject <NSCopying> {
+	NSString *name; 	
+}
+
+-(id)increment;
++(id)initialize:(NSString *)aName;
+
++(id)north;
++(id)east;
++(id)south;
++(id)west;
+
+@end
+
+extern Direction *North;

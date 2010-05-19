@@ -32,7 +32,7 @@
 
 -(IBAction)move:(id)sender 
 {
-	[orientation increment];
+	orientation = [orientation increment];
 }
 
 @end
