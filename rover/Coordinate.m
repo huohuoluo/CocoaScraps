@@ -13,7 +13,7 @@
 
 @synthesize x,y;
 
--(id)initWithX:(int)xCoordinate Y:(int)yCoordinate
+-(id)initWithX:(float)xCoordinate Y:(float)yCoordinate
 {
 	if(self = [super init])
 	{
@@ -25,19 +25,19 @@
 
 -(id)add:(Coordinate*)coordinate 
 {
-	int newX = x + [coordinate x];
-	int newY = y + [coordinate y];
+	float newX = x + [coordinate x];
+	float newY = y + [coordinate y];
 	return [Coordinate initializeWithX:newX Y:newY];
 }
 
-+(id)initializeWithX:(int)xCoordinate Y:(int)yCoordinate
++(id)initializeWithX:(float)xCoordinate Y:(float)yCoordinate
 {
 	return [[Coordinate alloc] initWithX:xCoordinate Y:yCoordinate];
 }
 
 +(id) origin
 {
-	return [Coordinate initializeWithX:0 Y:0];
+	return [Coordinate initializeWithX:0.0 Y:0.0];
 }
 
 @end

@@ -10,6 +10,12 @@
 
 
 @implementation Orientation
+@synthesize direction, coordinate;
+
++(id)initializeWithDirection:(Direction *)direction coordinate:(Coordinate *)coordinate
+{
+	return [[Orientation alloc] initWithDirection:direction coordinate:coordinate];
+}
 
 -(id)initWithDirection:(Direction *)aDirection coordinate:(Coordinate *)aCoordinate
 {
@@ -30,6 +36,16 @@
 {
 	Coordinate *increment = [direction increment];
 	return [[Orientation alloc] initWithDirection:direction coordinate:[coordinate add:increment]];
+}
+
+-(id)turnLeft
+{
+	direction = [direction left];
+}
+
+-(id)turnRight
+{
+	direction = [direction right];	
 }
 
 @end

@@ -10,15 +10,17 @@
 
 
 @interface Coordinate : NSObject {
-	int x;
-	int y;
+	float x;
+	float y;
 }
 
-@property(nonatomic, assign) int x;
-@property(nonatomic, assign) int y;
+@property(readwrite, assign) float x;
+@property(readwrite, assign) float y;
 
 -(id)add:(Coordinate*)coordinate;
+-(id)initWithX:(float)xCoordinate Y:(float)yCoordinate;
 +(id)origin;
-+(id)initializeWithX:(int)xCoordinate Y:(int)yCoordinate;
++(id)initializeWithX:(float)xCoordinate Y:(float)yCoordinate;
+
 @end
 

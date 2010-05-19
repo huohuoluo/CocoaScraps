@@ -14,6 +14,9 @@
 }
 
 -(id)increment;
+-(id)left;
+-(id)right;
+
 +(id)initialize:(NSString *)aName;
 
 +(id)north;
@@ -21,6 +24,7 @@
 +(id)south;
 +(id)west;
 
+@property(readwrite, copy) NSString *name; 
 @end
 
 extern Direction *North;

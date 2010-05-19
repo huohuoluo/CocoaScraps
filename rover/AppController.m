@@ -22,17 +22,18 @@
 
 -(IBAction)turnLeft:(id)sender 
 {
-	NSLog(@"turnLeft");
+	[orientation turnLeft];
 }
 
 -(IBAction)turnRight:(id)sender 
 {
-	NSLog(@"turnRight");	
+	[orientation turnRight];
 }
 
 -(IBAction)move:(id)sender 
 {
-	orientation = [orientation increment];
+	[self setValue:[orientation increment] forKey:@"orientation"];
+//	NSLog(@"Direction: %s X:%f Y:%f", [[orientation direction] name], [[orientation coordinate] x], [[orientation coordinate] y]);
 }
 
 @end

@@ -10,6 +10,8 @@
 
 @implementation Direction
 
+@synthesize name;
+
 +initialize:(NSString *)name
 {
 	return [[Direction alloc] initWithName:name];
@@ -29,10 +31,10 @@
 	static NSMutableDictionary *increments = NULL;
 	if(!increments)
 	{
-		increments = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[Coordinate initializeWithX:1 Y:0], [Direction north],
-										   [Coordinate initializeWithX:0 Y:1], [Direction east],
-										   [Coordinate initializeWithX:-1 Y:0], [Direction south],
-										   [Coordinate initializeWithX:0 Y:-1], [Direction west],
+		increments = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[Coordinate initializeWithX:0 Y:1], [Direction north],
+										   [Coordinate initializeWithX:1 Y:0], [Direction east],
+										   [Coordinate initializeWithX:0 Y:-1], [Direction south],
+										   [Coordinate initializeWithX:-1 Y:0], [Direction west],
 										   nil
 		 ];
 	}
@@ -42,7 +44,6 @@
 -(id)increment
 {
 	Coordinate *c = [[self incrementSequence] objectForKey:self];
-	NSLog(@"%d - %d",[c x],  [c y]);
 	return c;
 }
 
@@ -51,9 +52,16 @@
 	static NSArray *turns = NULL;
 	if(!turns)
 	{
-		[turns initWithObjects:[Direction north], [Direction east], [Direction south], [Direction west], nil];
+		turns = [NSArray arrayWithObjects:[Direction north], [Direction east], [Direction south], [Direction west], nil];
 	}
 	return turns;
+}
+
+-(id)right
+{
+	int index = [[self turnSequence] indexOfObject:self];
+	int nextDirectionIndex = (index+1)%4;
+	return [[self turnSequence] objectAtIndex:nextDirectionIndex];
 }
 
 -(id)copyWithZone:(NSZone *)zone

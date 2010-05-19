@@ -15,7 +15,21 @@
 		BACBB79E11A2F76200C94765 /* Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = BACBB79D11A2F76200C94765 /* Direction.m */; };
 		BACBB83A11A324BA00C94765 /* Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = BACBB83911A324BA00C94765 /* Orientation.m */; };
 		BACBB83D11A3253B00C94765 /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACBB83C11A3253B00C94765 /* Coordinate.m */; };
+		BAE44A6E11A45EE500EA4A83 /* CoordinateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE44A6D11A45EE500EA4A83 /* CoordinateTest.m */; };
+		BAE44AEE11A46B9C00EA4A83 /* rover.app in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* rover.app */; };
+		BAE44BB311A47ECD00EA4A83 /* OrientationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE44BB211A47ECD00EA4A83 /* OrientationTest.m */; };
+		BAE44C6011A48DA300EA4A83 /* DirectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE44C5F11A48DA300EA4A83 /* DirectionTest.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAE44A6411A45E6100EA4A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090 /* rover */;
+			remoteInfo = rover;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -36,6 +50,14 @@
 		BACBB83911A324BA00C94765 /* Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Orientation.m; sourceTree = "<group>"; };
 		BACBB83B11A3253B00C94765 /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
 		BACBB83C11A3253B00C94765 /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		BAE44A5F11A45E5100EA4A83 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAE44A6011A45E5100EA4A83 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		BAE44A6C11A45EE500EA4A83 /* CoordinateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinateTest.h; sourceTree = "<group>"; };
+		BAE44A6D11A45EE500EA4A83 /* CoordinateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinateTest.m; sourceTree = "<group>"; };
+		BAE44BB111A47ECD00EA4A83 /* OrientationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrientationTest.h; sourceTree = "<group>"; };
+		BAE44BB211A47ECD00EA4A83 /* OrientationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrientationTest.m; sourceTree = "<group>"; };
+		BAE44C5E11A48DA300EA4A83 /* DirectionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionTest.h; sourceTree = "<group>"; };
+		BAE44C5F11A48DA300EA4A83 /* DirectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +66,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAE44A5C11A45E5100EA4A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* rover.app */,
+				BAE44A5F11A45E5100EA4A83 /* Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,11 +124,13 @@
 		29B97314FDCFA39411CA2CEA /* rover */ = {
 			isa = PBXGroup;
 			children = (
+				BAE44A5911A45E3E00EA4A83 /* Tests */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				BAE44A6011A45E5100EA4A83 /* Tests-Info.plist */,
 			);
 			name = rover;
 			sourceTree = "<group>";
@@ -131,6 +163,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BAE44A5911A45E3E00EA4A83 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BAE44A6C11A45EE500EA4A83 /* CoordinateTest.h */,
+				BAE44A6D11A45EE500EA4A83 /* CoordinateTest.m */,
+				BAE44BB111A47ECD00EA4A83 /* OrientationTest.h */,
+				BAE44BB211A47ECD00EA4A83 /* OrientationTest.m */,
+				BAE44C5E11A48DA300EA4A83 /* DirectionTest.h */,
+				BAE44C5F11A48DA300EA4A83 /* DirectionTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +197,25 @@
 			productReference = 8D1107320486CEB800E47090 /* rover.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BAE44A5E11A45E5100EA4A83 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE44A6311A45E5200EA4A83 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				BAE44A5A11A45E5100EA4A83 /* Resources */,
+				BAE44A5B11A45E5100EA4A83 /* Sources */,
+				BAE44A5C11A45E5100EA4A83 /* Frameworks */,
+				BAE44A5D11A45E5100EA4A83 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAE44A6511A45E6100EA4A83 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = BAE44A5F11A45E5100EA4A83 /* Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* rover */,
+				BAE44A5E11A45E5100EA4A83 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -179,7 +244,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAE44A5A11A45E5100EA4A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE44AEE11A46B9C00EA4A83 /* rover.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAE44A5D11A45E5100EA4A83 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -194,7 +283,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAE44A5B11A45E5100EA4A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAE44A6E11A45EE500EA4A83 /* CoordinateTest.m in Sources */,
+				BAE44BB311A47ECD00EA4A83 /* OrientationTest.m in Sources */,
+				BAE44C6011A48DA300EA4A83 /* DirectionTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAE44A6511A45E6100EA4A83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* rover */;
+			targetProxy = BAE44A6411A45E6100EA4A83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
@@ -216,6 +323,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BAE44A6111A45E5200EA4A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(CONFIGURATION_BUILD_DIR)/rover.app/Contents/MacOS/rover";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				TEST_HOST = "$(CONFIGURATION_BUILD_DIR)/rover.app/Contents/MacOS/rover";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		BAE44A6211A45E5200EA4A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,6 +439,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BAE44A6311A45E5200EA4A83 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAE44A6111A45E5200EA4A83 /* Debug */,
+				BAE44A6211A45E5200EA4A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "rover" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

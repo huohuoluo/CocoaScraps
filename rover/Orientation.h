@@ -15,5 +15,12 @@
 	Coordinate *coordinate;
 }
 
++(id)initializeWithDirection:(Direction *)direction coordinate:(Coordinate *)coordinate;
 -(id)increment;
+-(id)turnLeft;
+-(id)turnRight;
+
+@property(readwrite, retain) Direction *direction;
+@property(readwrite, retain) Coordinate *coordinate;
+
 @end
