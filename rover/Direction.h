@@ -16,7 +16,7 @@
 -(id)increment;
 -(id)left;
 -(id)right;
-
++(NSArray *)turnSequence ;
 +(id)initialize:(NSString *)aName;
 
 +(id)north;

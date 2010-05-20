@@ -47,21 +47,28 @@
 	return c;
 }
 
--(NSArray *)turnSequence 
++(NSArray *)turnSequence 
 {
-	static NSArray *turns = NULL;
-	if(!turns)
+	static NSArray *clockWiseTurn = NULL;
+	if(!clockWiseTurn)
 	{
-		turns = [NSArray arrayWithObjects:[Direction north], [Direction east], [Direction south], [Direction west], nil];
-	}
-	return turns;
+		clockWiseTurn = [NSArray arrayWithObjects:[Direction north], [Direction east], [Direction south], [Direction west], nil];
+	}	
+	return clockWiseTurn;
 }
 
 -(id)right
 {
-	int index = [[self turnSequence] indexOfObject:self];
+	int index = [[Direction turnSequence] indexOfObject:self];
 	int nextDirectionIndex = (index+1)%4;
-	return [[self turnSequence] objectAtIndex:nextDirectionIndex];
+	return [[Direction turnSequence] objectAtIndex:nextDirectionIndex];
+}
+
+-(id)left
+{
+	int index = [[Direction turnSequence] indexOfObject:self];
+	int nextDirectionIndex = (3+index)%4;
+	return [[Direction turnSequence] objectAtIndex:nextDirectionIndex];
 }
 
 -(id)copyWithZone:(NSZone *)zone

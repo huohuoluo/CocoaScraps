@@ -22,12 +22,12 @@
 
 -(IBAction)turnLeft:(id)sender 
 {
-	[orientation turnLeft];
+	[self setValue:[orientation turnLeft] forKey:@"orientation"];
 }
 
 -(IBAction)turnRight:(id)sender 
 {
-	[orientation turnRight];
+	[self setValue:[orientation turnRight] forKey:@"orientation"];
 }
 
 -(IBAction)move:(id)sender 

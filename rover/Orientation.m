@@ -12,11 +12,6 @@
 @implementation Orientation
 @synthesize direction, coordinate;
 
-+(id)initializeWithDirection:(Direction *)direction coordinate:(Coordinate *)coordinate
-{
-	return [[Orientation alloc] initWithDirection:direction coordinate:coordinate];
-}
-
 -(id)initWithDirection:(Direction *)aDirection coordinate:(Coordinate *)aCoordinate
 {
 	if(self = [super init])
@@ -25,6 +20,11 @@
 		coordinate = aCoordinate;
 	}
 	return self;	
+}
+
++(id)initializeWithDirection:(Direction *)direction coordinate:(Coordinate *)coordinate
+{
+	return [[Orientation alloc] initWithDirection:direction coordinate:coordinate];
 }
 
 -(id)init
@@ -40,12 +40,12 @@
 
 -(id)turnLeft
 {
-	direction = [direction left];
+	return [[Orientation alloc] initWithDirection:[direction left] coordinate:coordinate];	
 }
 
 -(id)turnRight
 {
-	direction = [direction right];	
+	return [[Orientation alloc] initWithDirection:[direction right] coordinate:coordinate];	
 }
 
 @end
