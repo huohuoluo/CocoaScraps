@@ -34,14 +34,14 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 295995886;
-			PBXWorkspaceStateSaveDate = 295995886;
+			PBXPerProjectTemplateStateSaveDate = 296372860;
+			PBXWorkspaceStateSaveDate = 296372860;
 		};
 		perUserProjectItems = {
 			BA136BB3119F1BD800AEE1D2 /* PBXTextBookmark */ = BA136BB3119F1BD800AEE1D2 /* PBXTextBookmark */;
 			BA136BB4119F1BD800AEE1D2 /* PBXTextBookmark */ = BA136BB4119F1BD800AEE1D2 /* PBXTextBookmark */;
+			BACE018211AA4C2700B74E25 /* PBXTextBookmark */ = BACE018211AA4C2700B74E25 /* PBXTextBookmark */;
 			BAE44B3511A4760600EA4A83 /* PBXTextBookmark */ = BAE44B3511A4760600EA4A83 /* PBXTextBookmark */;
-			BAE44B3711A4760600EA4A83 /* PBXTextBookmark */ = BAE44B3711A4760600EA4A83 /* PBXTextBookmark */;
 			BAE44C3711A489FF00EA4A83 /* PBXTextBookmark */ = BAE44C3711A489FF00EA4A83 /* PBXTextBookmark */;
 		};
 		sourceControlManager = BA136B8D119EF6D900AEE1D2 /* Source Control */;
@@ -99,7 +99,7 @@
 	BA136B91119EF74900AEE1D2 /* AppController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1007, 472}}";
-			sepNavSelRange = "{379, 0}";
+			sepNavSelRange = "{244, 0}";
 			sepNavVisRange = "{0, 570}";
 		};
 	};
@@ -123,6 +123,16 @@
 		vrLen = 201;
 		vrLoc = 0;
 	};
+	BACE018211AA4C2700B74E25 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BA136B91119EF74900AEE1D2 /* AppController.m */;
+		name = "AppController.m: 16";
+		rLen = 0;
+		rLoc = 244;
+		rType = 0;
+		vrLen = 570;
+		vrLoc = 0;
+	};
 	BAE44B3511A4760600EA4A83 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = BA136B90119EF74900AEE1D2 /* AppController.h */;
@@ -131,16 +141,6 @@
 		rLoc = 216;
 		rType = 0;
 		vrLen = 291;
-		vrLoc = 0;
-	};
-	BAE44B3711A4760600EA4A83 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = BA136B91119EF74900AEE1D2 /* AppController.m */;
-		name = "AppController.m: 23";
-		rLen = 0;
-		rLoc = 416;
-		rType = 0;
-		vrLen = 570;
 		vrLoc = 0;
 	};
 	BAE44C3711A489FF00EA4A83 /* PBXTextBookmark */ = {
