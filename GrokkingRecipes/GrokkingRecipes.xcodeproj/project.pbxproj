@@ -14,6 +14,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		BA4DBBA211AAE30E00839E8C /* GrokkingRecipes.app in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* GrokkingRecipes.app */; };
 		BA4DBBB211AAE32A00839E8C /* RecipeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBBB111AAE32A00839E8C /* RecipeTest.m */; };
+		BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */; };
 		BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE018511AA4C6700B74E25 /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +23,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1107260486CEB800E47090 /* GrokkingRecipes */;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
 			remoteInfo = GrokkingRecipes;
 		};
 /* End PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		BA4DBB8D11AAE26300839E8C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		BA4DBBB011AAE32A00839E8C /* RecipeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTest.h; sourceTree = "<group>"; };
 		BA4DBBB111AAE32A00839E8C /* RecipeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTest.m; sourceTree = "<group>"; };
+		BA4DBC4711AAF56300839E8C /* ManagedObjectContextFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedObjectContextFactory.h; sourceTree = "<group>"; };
+		BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectContextFactory.m; sourceTree = "<group>"; };
 		BACE018411AA4C6700B74E25 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BACE018511AA4C6700B74E25 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +74,8 @@
 			children = (
 				BACE018411AA4C6700B74E25 /* AppDelegate.h */,
 				BACE018511AA4C6700B74E25 /* AppDelegate.m */,
+				BA4DBC4711AAF56300839E8C /* ManagedObjectContextFactory.h */,
+				BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				770B37ED0679A11B001EADE2 /* DataModel.xcdatamodel in Sources */,
 				BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */,
+				BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

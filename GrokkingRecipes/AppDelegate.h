@@ -7,23 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ManagedObjectContextFactory.h"
+
 @class Recipe;
 
 @interface AppDelegate : NSObject {
 	IBOutlet NSArrayController *recipeController;
 	IBOutlet NSWindow *window;
-
-	NSPersistentStoreCoordinator *persistentStoreCoordinator;
-	NSManagedObjectModel *managedObjectModel;
 	NSManagedObjectContext *managedObjectContext;
-	
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
-- (NSManagedObjectModel *)managedObjectModel;
-- (NSManagedObjectContext *)managedObjectContext;
-
-
+-(NSManagedObjectContext *)managedObjectContext;
 -(IBAction)addImage:(id)sender;
 
 @end
