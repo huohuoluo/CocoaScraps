@@ -42,7 +42,7 @@
 - (NSManagedObjectContext*)managedObjectContext
 {
 	if (managedObjectContext) return managedObjectContext;
-	managedObjectContext = [[[ManagedObjectContextFactory alloc] init] create];
+	managedObjectContext = [[[ManagedObjectContextFactory alloc] init] createXMLFileBased:@"GrokkingRecipes.xml"];
 	return managedObjectContext;
 }
 

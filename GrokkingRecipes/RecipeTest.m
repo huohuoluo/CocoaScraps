@@ -8,12 +8,17 @@
 
 #import "RecipeTest.h"
 
-
 @implementation RecipeTest
 
 -(void)testTruth
 {
-	STAssertTrue(true, @"the truth never lies");
+	NSManagedObject *recipe;
+	
+	recipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe"
+											 inManagedObjectContext:context];
+	
+	[recipe setValue:@"Double Cheese Crunch" forKey:@"name"];
+	STAssertEqualObjects(@"Double Cheese Crunch", [recipe name], @"recipe should have a name");
 }
 
 @end

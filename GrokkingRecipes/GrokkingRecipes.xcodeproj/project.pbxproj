@@ -16,6 +16,7 @@
 		BA4DBBB211AAE32A00839E8C /* RecipeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBBB111AAE32A00839E8C /* RecipeTest.m */; };
 		BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */; };
 		BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE018511AA4C6700B74E25 /* AppDelegate.m */; };
+		BADF481E11AC2C6300CC98F1 /* CoreDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectContextFactory.m; sourceTree = "<group>"; };
 		BACE018411AA4C6700B74E25 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BACE018511AA4C6700B74E25 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BADF481C11AC2C6300CC98F1 /* CoreDataTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestCase.h; sourceTree = "<group>"; };
+		BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 			children = (
 				BA4DBBB011AAE32A00839E8C /* RecipeTest.h */,
 				BA4DBBB111AAE32A00839E8C /* RecipeTest.m */,
+				BADF481C11AC2C6300CC98F1 /* CoreDataTestCase.h */,
+				BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4DBBB211AAE32A00839E8C /* RecipeTest.m in Sources */,
+				BADF481E11AC2C6300CC98F1 /* CoreDataTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

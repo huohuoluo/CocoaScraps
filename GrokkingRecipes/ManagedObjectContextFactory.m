@@ -32,11 +32,10 @@
 	return [basePath stringByAppendingPathComponent:@"GrokkingRecipes"];
 }
 
-- (NSPersistentStoreCoordinator*)persistentStoreCoordinator;
+- (NSPersistentStoreCoordinator*)persistentStoreCoordinator:(NSString *)fileStore;
 {
 	if (persistentStoreCoordinator) return persistentStoreCoordinator;
 	
-	NSString *filename = @"GrokkingRecipes.xml";
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	NSString *path = [ManagedObjectContextFactory applicationSupportFolder];
 	if ( ![fileManager fileExistsAtPath:path
@@ -46,7 +45,7 @@
 								attributes:nil];
 	}
 	
-	path = [path stringByAppendingPathComponent:filename];
+	path = [path stringByAppendingPathComponent:fileStore];
 	NSURL *url = [NSURL fileURLWithPath:path];
 	NSManagedObjectModel *mom = [self managedObjectModel];
 	persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] 
@@ -64,13 +63,29 @@
 	return persistentStoreCoordinator;
 }
 
--(NSManagedObjectContext *)create
+-(NSManagedObjectContext *)createXMLFileBased:(NSString *)filePath
 {
 	if (managedObjectContext) return managedObjectContext;
-	NSPersistentStoreCoordinator *coord = [self persistentStoreCoordinator];
+	NSPersistentStoreCoordinator *coord = [self persistentStoreCoordinator:filePath];
 	managedObjectContext = [[NSManagedObjectContext alloc] init];
 	[managedObjectContext setPersistentStoreCoordinator: coord];
 	return managedObjectContext;	
+}
+
+-(NSManagedObjectContext *)createInMemory
+{
+	managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles: nil] retain];
+    persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: managedObjectModel];
+	
+	[persistentStoreCoordinator addPersistentStoreWithType: NSInMemoryStoreType
+                                configuration: nil
+                                          URL: nil
+                                      options: nil 
+                                        error: NULL];
+	
+    managedObjectContext = [[NSManagedObjectContext alloc] init];
+    [managedObjectContext setPersistentStoreCoordinator: persistentStoreCoordinator];
+	return managedObjectContext;
 }
 
 @end

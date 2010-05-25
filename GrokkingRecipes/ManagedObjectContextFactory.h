@@ -8,13 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface ManagedObjectContextFactory : NSObject {
 	NSPersistentStoreCoordinator *persistentStoreCoordinator;
 	NSManagedObjectModel *managedObjectModel;
 	NSManagedObjectContext *managedObjectContext;	
 }
 
--(NSManagedObjectContext *)create;
-
+-(NSManagedObjectContext *)createXMLFileBased:(NSString *)filePath;
+-(NSManagedObjectContext *)createInMemory;
 @end

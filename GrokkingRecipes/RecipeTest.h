@@ -6,11 +6,9 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import "CoreDataTestCase.h"
 
-
-@interface RecipeTest : SenTestCase {
-
+@interface RecipeTest : CoreDataTestCase 
+{
 }
-
 @end
