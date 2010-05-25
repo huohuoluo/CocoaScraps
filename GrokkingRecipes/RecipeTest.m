@@ -19,7 +19,16 @@
 	[recipe setValue:@"~/foo.png" forKey:@"imagePath"];
 	[recipe setValue:[NSNumber numberWithInt:3] forKey:@"serves"];
 	[recipe setValue:@"Entree" forKey:@"type"];
-	
+
+	RecipeIngredient *firstIngredient = [NSEntityDescription insertNewObjectForEntityForName:@"RecipeIngredient"
+												   inManagedObjectContext:context];
+
+	RecipeIngredient *secondIngredient = [NSEntityDescription insertNewObjectForEntityForName:@"RecipeIngredient"
+												   inManagedObjectContext:context];
+
+	NSMutableSet *recipeIngredients = [recipe ingredients];
+	[recipeIngredients addObject:firstIngredient];
+	[recipeIngredients addObject:secondIngredient];
 	
 	NSFetchRequest *request = [[NSFetchRequest alloc] init]; 
 	[request setEntity:[NSEntityDescription entityForName:@"Recipe" 
@@ -37,6 +46,12 @@
 	STAssertEqualObjects(@"~/foo.png", [loadedRecipe imagePath], @"recipe should have a name");
 	STAssertEqualObjects([NSNumber numberWithInt:3], [loadedRecipe serves], @"");
 	STAssertEqualObjects(@"Entree", [loadedRecipe type], @"");	
+	
+	NSSet *loadedIngredients = [recipe ingredients];
+	
+	STAssertEquals(2u, [loadedIngredients count], @"");
+	STAssertTrue([loadedIngredients containsObject:firstIngredient], @""); 
+	STAssertTrue([loadedIngredients containsObject:secondIngredient], @"");
 }
 
 @end

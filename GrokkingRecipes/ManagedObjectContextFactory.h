@@ -16,4 +16,5 @@
 
 -(NSManagedObjectContext *)createXMLFileBased:(NSString *)filePath;
 -(NSManagedObjectContext *)createInMemory;
++(NSString *)applicationSupportFolder;
 @end

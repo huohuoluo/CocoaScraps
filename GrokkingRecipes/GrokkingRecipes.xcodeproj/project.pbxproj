@@ -18,6 +18,7 @@
 		BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE018511AA4C6700B74E25 /* AppDelegate.m */; };
 		BADF481E11AC2C6300CC98F1 /* CoreDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */; };
 		BADF488711AC31BA00CC98F1 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF488611AC31BA00CC98F1 /* Recipe.m */; };
+		BADF490D11AC447A00CC98F1 /* RecipeIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF490C11AC447A00CC98F1 /* RecipeIngredient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestCase.m; sourceTree = "<group>"; };
 		BADF488511AC31BA00CC98F1 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		BADF488611AC31BA00CC98F1 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		BADF490B11AC447A00CC98F1 /* RecipeIngredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeIngredient.h; sourceTree = "<group>"; };
+		BADF490C11AC447A00CC98F1 /* RecipeIngredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeIngredient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */,
 				BADF488511AC31BA00CC98F1 /* Recipe.h */,
 				BADF488611AC31BA00CC98F1 /* Recipe.m */,
+				BADF490B11AC447A00CC98F1 /* RecipeIngredient.h */,
+				BADF490C11AC447A00CC98F1 /* RecipeIngredient.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */,
 				BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */,
 				BADF488711AC31BA00CC98F1 /* Recipe.m in Sources */,
+				BADF490D11AC447A00CC98F1 /* RecipeIngredient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

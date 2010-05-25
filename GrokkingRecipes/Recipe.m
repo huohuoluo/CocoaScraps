@@ -11,10 +11,6 @@
 
 @implementation Recipe
 
-@dynamic name;
-@dynamic desc;
-@dynamic type;
-@dynamic imagePath;
-@dynamic serves;
+@dynamic name, desc, type, imagePath, serves, ingredients;
 
 @end

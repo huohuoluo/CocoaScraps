@@ -18,5 +18,6 @@
 @property(readwrite, copy) NSString *type;
 @property(readwrite, copy) NSString *imagePath;
 @property(readwrite, retain) NSNumber *serves;
+@property(readwrite, retain) NSMutableSet *ingredients;
 
 @end
