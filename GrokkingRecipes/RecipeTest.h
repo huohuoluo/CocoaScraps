@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataTestCase.h"
+#import "Recipe.h"
 
 @interface RecipeTest : CoreDataTestCase 
 {

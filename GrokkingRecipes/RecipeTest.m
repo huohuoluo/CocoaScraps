@@ -10,15 +10,33 @@
 
 @implementation RecipeTest
 
--(void)testTruth
+-(void)testShouldSaveAndLoadRecipeWithAttributesAndAssociations
 {
-	NSManagedObject *recipe;
-	
-	recipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe"
+	Recipe *recipe = [NSEntityDescription insertNewObjectForEntityForName:@"Recipe"
 											 inManagedObjectContext:context];
-	
 	[recipe setValue:@"Double Cheese Crunch" forKey:@"name"];
-	STAssertEqualObjects(@"Double Cheese Crunch", [recipe name], @"recipe should have a name");
+	[recipe setValue:@"Very Tasty Stuff" forKey:@"desc"];
+	[recipe setValue:@"~/foo.png" forKey:@"imagePath"];
+	[recipe setValue:[NSNumber numberWithInt:3] forKey:@"serves"];
+	[recipe setValue:@"Entree" forKey:@"type"];
+	
+	
+	NSFetchRequest *request = [[NSFetchRequest alloc] init]; 
+	[request setEntity:[NSEntityDescription entityForName:@"Recipe" 
+								   inManagedObjectContext:context]]; 
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = 'Double Cheese Crunch'"];
+	[request setPredicate:predicate];
+	
+	NSArray *results = [context executeFetchRequest:request error:nil];
+	STAssertEquals(1u, [results count], @"");
+
+	Recipe *loadedRecipe = [results lastObject];
+
+	STAssertEqualObjects(@"Double Cheese Crunch", [loadedRecipe name], @"recipe should have a name");
+	STAssertEqualObjects(@"Very Tasty Stuff", [loadedRecipe desc], @"recipe should have a name");
+	STAssertEqualObjects(@"~/foo.png", [loadedRecipe imagePath], @"recipe should have a name");
+	STAssertEqualObjects([NSNumber numberWithInt:3], [loadedRecipe serves], @"");
+	STAssertEqualObjects(@"Entree", [loadedRecipe type], @"");	
 }
 
 @end

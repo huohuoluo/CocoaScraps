@@ -17,6 +17,7 @@
 		BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */; };
 		BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE018511AA4C6700B74E25 /* AppDelegate.m */; };
 		BADF481E11AC2C6300CC98F1 /* CoreDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */; };
+		BADF488711AC31BA00CC98F1 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF488611AC31BA00CC98F1 /* Recipe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		BACE018511AA4C6700B74E25 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BADF481C11AC2C6300CC98F1 /* CoreDataTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestCase.h; sourceTree = "<group>"; };
 		BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestCase.m; sourceTree = "<group>"; };
+		BADF488511AC31BA00CC98F1 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		BADF488611AC31BA00CC98F1 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				BACE018511AA4C6700B74E25 /* AppDelegate.m */,
 				BA4DBC4711AAF56300839E8C /* ManagedObjectContextFactory.h */,
 				BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */,
+				BADF488511AC31BA00CC98F1 /* Recipe.h */,
+				BADF488611AC31BA00CC98F1 /* Recipe.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				770B37ED0679A11B001EADE2 /* DataModel.xcdatamodel in Sources */,
 				BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */,
 				BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */,
+				BADF488711AC31BA00CC98F1 /* Recipe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
