@@ -2,53 +2,27 @@
 //  AppDelegate.m
 //  GrokkingRecipes
 //
-//  Created by Akshay on 5/24/10.
+//  Created by Akshay on 5/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
--(IBAction)addImage:(id)sender 
+@synthesize mainMenuController;
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-	Recipe *selectedRecipe = [[recipeController selectedObjects] lastObject];
-	if (selectedRecipe == nil) return;
-	
-	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
-	[openPanel setCanChooseDirectories:NO];
-	[openPanel setCanCreateDirectories:NO];
-	[openPanel setAllowsMultipleSelection:NO];
-	
-	SEL openSelectedHandler = @selector(addImageSheetDidEnd:returnCode:contextInfo:);
-	[openPanel beginSheetForDirectory:nil file:nil modalForWindow:window modalDelegate:self didEndSelector:openSelectedHandler contextInfo:selectedRecipe];
+	self.mainMenuController = [[MainMenuController initialize] autorelease];
+	[[self.mainMenuController window] makeKeyAndOrderFront:self];
 }
 
-- (void)addImageSheetDidEnd:(NSOpenPanel*)openPanel returnCode:(NSInteger)returnCode contextInfo:(NSManagedObject*)recipe
+- (void)applicationWillTerminate:(NSNotification *)notification
 {
-	if(returnCode == NSCancelButton) return;
-	NSString *fromPath = [openPanel filename];
-	NSString *destinationPath = [ManagedObjectContextFactory applicationSupportFolder];
-	NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString];
-	[destinationPath stringByAppendingString:guid];
-	NSError * error = nil;
-	[[NSFileManager defaultManager] copyItemAtPath:fromPath toPath:destinationPath error:&error];
-	if(error) [NSApp presentError:error];
-	
-	[recipe setValue:destinationPath forKey:@"imagePath"];
-}
-
-
-- (NSManagedObjectContext*)managedObjectContext
-{
-	if (managedObjectContext) return managedObjectContext;
-	managedObjectContext = [[[ManagedObjectContextFactory alloc] init] createXMLFileBased:@"GrokkingRecipes.xml"];
-	return managedObjectContext;
-}
-
-- (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window 
-{
-	return [[self managedObjectContext] undoManager];
+	[self.mainMenuController close];
+	self.mainMenuController = nil;
 }
 
 @end

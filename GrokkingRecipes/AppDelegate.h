@@ -2,22 +2,16 @@
 //  AppDelegate.h
 //  GrokkingRecipes
 //
-//  Created by Akshay on 5/24/10.
+//  Created by Akshay on 5/26/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ManagedObjectContextFactory.h"
-
-@class Recipe;
+#import "MainMenuController.h"
 
 @interface AppDelegate : NSObject {
-	IBOutlet NSArrayController *recipeController;
-	IBOutlet NSWindow *window;
-	NSManagedObjectContext *managedObjectContext;
+	MainMenuController *mainMenuController;
 }
 
--(NSManagedObjectContext *)managedObjectContext;
--(IBAction)addImage:(id)sender;
-
+@property(nonatomic, retain) MainMenuController *mainMenuController;
 @end

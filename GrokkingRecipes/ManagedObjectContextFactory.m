@@ -25,19 +25,12 @@
 	return managedObjectModel;
 }
 
-+ (NSString *)applicationSupportFolder
-{
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
-	NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
-	return [basePath stringByAppendingPathComponent:@"GrokkingRecipes"];
-}
-
 - (NSPersistentStoreCoordinator*)persistentStoreCoordinator:(NSString *)fileStore;
 {
 	if (persistentStoreCoordinator) return persistentStoreCoordinator;
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	NSString *path = [ManagedObjectContextFactory applicationSupportFolder];
+	NSString *path = [DirectorySupport applicationSupportFolder];
 	if ( ![fileManager fileExistsAtPath:path
 							isDirectory:NULL] ) 
 	{

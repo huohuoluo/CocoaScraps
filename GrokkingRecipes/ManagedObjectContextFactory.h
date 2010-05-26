@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "AppDelegate.h"
+#import "DirectorySupport.h"
 
 @interface ManagedObjectContextFactory : NSObject {
 	NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -16,5 +18,4 @@
 
 -(NSManagedObjectContext *)createXMLFileBased:(NSString *)filePath;
 -(NSManagedObjectContext *)createInMemory;
-+(NSString *)applicationSupportFolder;
 @end

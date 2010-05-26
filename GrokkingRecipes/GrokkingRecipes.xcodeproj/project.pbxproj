@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
+		2F7446990DB6B7EA00F9684A /* RecipeManagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* RecipeManagement.xib */; };
 		770B37ED0679A11B001EADE2 /* DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DataModel.xcdatamodel */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		BA20DF8111AD18E40001CD5E /* AppDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA20DF8011AD18E40001CD5E /* AppDelegateTest.m */; };
+		BA20DFB711AD1EA60001CD5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA20DFB611AD1EA60001CD5E /* AppDelegate.m */; };
 		BA4DBBA211AAE30E00839E8C /* GrokkingRecipes.app in Resources */ = {isa = PBXBuildFile; fileRef = 8D1107320486CEB800E47090 /* GrokkingRecipes.app */; };
 		BA4DBBB211AAE32A00839E8C /* RecipeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBBB111AAE32A00839E8C /* RecipeTest.m */; };
 		BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */; };
-		BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE018511AA4C6700B74E25 /* AppDelegate.m */; };
+		BA797D8511ADA2860061778F /* DirectorySupport.m in Sources */ = {isa = PBXBuildFile; fileRef = BA797D8411ADA2860061778F /* DirectorySupport.m */; };
+		BA797E6111ADB4B90061778F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA797E6011ADB4B90061778F /* MainMenu.xib */; };
+		BACE018611AA4C6700B74E25 /* MainMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACE018511AA4C6700B74E25 /* MainMenuController.m */; };
 		BADF481E11AC2C6300CC98F1 /* CoreDataTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */; };
 		BADF488711AC31BA00CC98F1 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF488611AC31BA00CC98F1 /* Recipe.m */; };
 		BADF490D11AC447A00CC98F1 /* RecipeIngredient.m in Sources */ = {isa = PBXBuildFile; fileRef = BADF490C11AC447A00CC98F1 /* RecipeIngredient.m */; };
@@ -37,20 +41,26 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/RecipeManagement.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* GrokkingRecipes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrokkingRecipes_Prefix.pch; sourceTree = "<group>"; };
 		770B37EC0679A11B001EADE2 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* GrokkingRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrokkingRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA20DF7F11AD18E40001CD5E /* AppDelegateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateTest.h; sourceTree = "<group>"; };
+		BA20DF8011AD18E40001CD5E /* AppDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateTest.m; sourceTree = "<group>"; };
+		BA20DFB511AD1EA60001CD5E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA20DFB611AD1EA60001CD5E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BA4DBB8C11AAE26300839E8C /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4DBB8D11AAE26300839E8C /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		BA4DBBB011AAE32A00839E8C /* RecipeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTest.h; sourceTree = "<group>"; };
 		BA4DBBB111AAE32A00839E8C /* RecipeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTest.m; sourceTree = "<group>"; };
 		BA4DBC4711AAF56300839E8C /* ManagedObjectContextFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedObjectContextFactory.h; sourceTree = "<group>"; };
 		BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectContextFactory.m; sourceTree = "<group>"; };
-		BACE018411AA4C6700B74E25 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BACE018511AA4C6700B74E25 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA797D8311ADA2860061778F /* DirectorySupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectorySupport.h; sourceTree = "<group>"; };
+		BA797D8411ADA2860061778F /* DirectorySupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectorySupport.m; sourceTree = "<group>"; };
+		BA797E6011ADB4B90061778F /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		BACE018411AA4C6700B74E25 /* MainMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuController.h; sourceTree = "<group>"; };
+		BACE018511AA4C6700B74E25 /* MainMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuController.m; sourceTree = "<group>"; };
 		BADF481C11AC2C6300CC98F1 /* CoreDataTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestCase.h; sourceTree = "<group>"; };
 		BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestCase.m; sourceTree = "<group>"; };
 		BADF488511AC31BA00CC98F1 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -81,14 +91,18 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BACE018411AA4C6700B74E25 /* AppDelegate.h */,
-				BACE018511AA4C6700B74E25 /* AppDelegate.m */,
+				BACE018411AA4C6700B74E25 /* MainMenuController.h */,
+				BACE018511AA4C6700B74E25 /* MainMenuController.m */,
 				BA4DBC4711AAF56300839E8C /* ManagedObjectContextFactory.h */,
 				BA4DBC4811AAF56300839E8C /* ManagedObjectContextFactory.m */,
 				BADF488511AC31BA00CC98F1 /* Recipe.h */,
 				BADF488611AC31BA00CC98F1 /* Recipe.m */,
 				BADF490B11AC447A00CC98F1 /* RecipeIngredient.h */,
 				BADF490C11AC447A00CC98F1 /* RecipeIngredient.m */,
+				BA20DFB511AD1EA60001CD5E /* AppDelegate.h */,
+				BA20DFB611AD1EA60001CD5E /* AppDelegate.m */,
+				BA797D8311ADA2860061778F /* DirectorySupport.h */,
+				BA797D8411ADA2860061778F /* DirectorySupport.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -131,6 +145,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				BA4DBB8D11AAE26300839E8C /* Tests-Info.plist */,
+				BA797E6011ADB4B90061778F /* MainMenu.xib */,
 			);
 			name = GrokkingRecipes;
 			sourceTree = "<group>";
@@ -147,9 +162,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				2F7446970DB6B7EA00F9684A /* RecipeManagement.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -178,6 +192,8 @@
 				BA4DBBB111AAE32A00839E8C /* RecipeTest.m */,
 				BADF481C11AC2C6300CC98F1 /* CoreDataTestCase.h */,
 				BADF481D11AC2C6300CC98F1 /* CoreDataTestCase.m */,
+				BA20DF7F11AD18E40001CD5E /* AppDelegateTest.h */,
+				BA20DF8011AD18E40001CD5E /* AppDelegateTest.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -246,7 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				2F7446990DB6B7EA00F9684A /* RecipeManagement.xib in Resources */,
+				BA797E6111ADB4B90061778F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +300,12 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				770B37ED0679A11B001EADE2 /* DataModel.xcdatamodel in Sources */,
-				BACE018611AA4C6700B74E25 /* AppDelegate.m in Sources */,
+				BACE018611AA4C6700B74E25 /* MainMenuController.m in Sources */,
 				BA4DBC4911AAF56300839E8C /* ManagedObjectContextFactory.m in Sources */,
 				BADF488711AC31BA00CC98F1 /* Recipe.m in Sources */,
 				BADF490D11AC447A00CC98F1 /* RecipeIngredient.m in Sources */,
+				BA20DFB711AD1EA60001CD5E /* AppDelegate.m in Sources */,
+				BA797D8511ADA2860061778F /* DirectorySupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +315,7 @@
 			files = (
 				BA4DBBB211AAE32A00839E8C /* RecipeTest.m in Sources */,
 				BADF481E11AC2C6300CC98F1 /* CoreDataTestCase.m in Sources */,
+				BA20DF8111AD18E40001CD5E /* AppDelegateTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +338,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
+		2F7446970DB6B7EA00F9684A /* RecipeManagement.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2F7446980DB6B7EA00F9684A /* English */,
 			);
-			name = MainMenu.xib;
+			name = RecipeManagement.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,6 +356,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
