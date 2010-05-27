@@ -13,9 +13,14 @@
 
 @synthesize mainMenuController;
 
+-(MainMenuController *)newWindowController 
+{
+	return [MainMenuController initialize];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-	self.mainMenuController = [[MainMenuController initialize] autorelease];
+	self.mainMenuController = [self newWindowController];
 	[[self.mainMenuController window] makeKeyAndOrderFront:self];
 }
 
@@ -24,5 +29,6 @@
 	[self.mainMenuController close];
 	self.mainMenuController = nil;
 }
+
 
 @end
